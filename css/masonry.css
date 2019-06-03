@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+  padding-bottom: 10px; /*espacio entre las imagenes en forma vertical*/
+  padding-right: 10px; /*espacio entre las imagenes en forma horizontal*/
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.grid-item:hover{
+    cursor: pointer;
+}
+
+/* desktop firts */
+
+/* cuando el tamaño llege a 768 hacia abajo se aplicaran los cambios */
+@media(max-width: 768px){
+    .grid-sizer,
+    .grid-item {
+        width: 50%;
+    }
+}
+
+/* cuando el tamaño llege a 567 hacia abajo se aplicaran los cambios */
+@media(max-width: 576px){
+    .grid-sizer,
+    .grid-item {
+        width: 100%;
+    }
+}
